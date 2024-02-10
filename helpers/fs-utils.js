@@ -1,3 +1,4 @@
+// our instructor had us pair in class on this homework
 const fs = require('fs');
 const util = require('util');
 

@@ -1,5 +1,5 @@
+// our instructor had us pair in class on this homework
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
 
 const PORT = 3113
@@ -26,4 +26,3 @@ app.get('/notes', (req, res) =>
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
 )
-
