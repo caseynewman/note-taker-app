@@ -1,14 +1,14 @@
 // our instructor had us pair in class on this homework
-const notesRouter = require('express').Router();
+const router = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fs-utils');
 const uuid = require('../helpers/uuid');
 
-notesRouter.get('/', (req, res) => {
+router.get('/', (req, res) => {
     console.info(`${req.method} request received for notes`);
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 })
 
-notesRouter.post('/', (req, res) => {
+router.post('/', (req, res) => {
     console.info(`${req.method} request received to add a note`);
     console.log(req.body);
   
@@ -18,7 +18,7 @@ notesRouter.post('/', (req, res) => {
       const newNote = {
         title,
         text,
-        note_id: uuid(),
+        id: uuid(),
       };
   
       readAndAppend(newNote, './db/db.json');
@@ -28,4 +28,8 @@ notesRouter.post('/', (req, res) => {
     }
 })
 
-module.exports = notesRouter
+router.delete('/:id', (req, res) => {
+    console.log('request to delete file received')
+});
+
+module.exports = router
