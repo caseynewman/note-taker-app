@@ -1,6 +1,6 @@
 // our instructor had us pair in class on this homework
 const router = require('express').Router();
-const { readFromFile, readAndAppend } = require('../helpers/fs-utils');
+const { readFromFile, readAndAppend, deleteNote } = require('../helpers/fs-utils');
 const uuid = require('../helpers/uuid');
 
 router.get('/', (req, res) => {
@@ -30,6 +30,7 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     console.log('request to delete file received')
+    deleteNote();
 });
 
 module.exports = router
