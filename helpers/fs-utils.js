@@ -32,18 +32,23 @@ const readAndAppend = (content, file) => {
     });
 };
 
-const deleteNote = (file, id) => {
+const deleteNoteFromFile = (id, file) => {
     fs.readFile(file, 'utf8', (err, data) => {
         if (err) {
             console.error(err);
         } else {
             const parsedData = JSON.parse(data);
-            for (let i = 0; i < parsedData.length; i++) 
+            // parsedData.filter(id);
+            // writeToFile(file, parsedData);
+            for (let i = 0; i < parsedData.length; i++) {
+                if (parsedData[i].id === id) {
+                    writeToFile(file, parsedData);
+                }
+            }
                 //loop through array, remove an item based off of id
                 //filter method
-                writeToFile(file, parsedData);
         }
     });
 }
 
-module.exports = { readFromFile, writeToFile, readAndAppend, deleteNote };
+module.exports = { readFromFile, writeToFile, readAndAppend, deleteNoteFromFile };
