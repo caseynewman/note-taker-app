@@ -38,13 +38,13 @@ const deleteNoteFromFile = (id, file) => {
             console.error(err);
         } else {
             const parsedData = JSON.parse(data);
-            // parsedData.filter(id);
-            // writeToFile(file, parsedData);
-            for (let i = 0; i < parsedData.length; i++) {
-                if (parsedData[i].id === id) {
-                    writeToFile(file, parsedData);
-                }
-            }
+            parsedData = parsedData.filter(note => note.id !== id);
+            writeToFile(file, parsedData);
+            // for (let i = 0; i < parsedData.length; i++) {
+            //     if (parsedData[i].id === id) {
+            //         writeToFile(file, parsedData);
+            //     }
+            // }
                 //loop through array, remove an item based off of id
                 //filter method
         }
