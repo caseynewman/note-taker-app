@@ -30,6 +30,7 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     console.log('request to delete file received');
+    const id = req.params.id;
     deleteNoteFromFile(id, './db/db.json');
 });
 
