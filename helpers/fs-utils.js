@@ -1,5 +1,5 @@
 // our instructor had us pair in class on this homework
-// also pulled from an in-class assignment
+// pulled from an in-class assignment
 const fs = require('fs');
 const util = require('util');
 
@@ -38,6 +38,7 @@ const deleteNoteFromFile = (id, file) => {
             console.error(err);
         } else {
             const parsedData = JSON.parse(data);
+            // filters out the note with the matching ID
             const filteredData = parsedData.filter(note => note.id !== id);
             writeToFile(file, filteredData);
         }

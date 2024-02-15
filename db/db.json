@@ -1,7 +1,17 @@
 [
     {
+        "title": "grocery list",
+        "text": "- fruit\n- yogurt\n- bread",
+        "id": "5c7a"
+    },
+    {
         "title": "read",
-        "text": "read 30 pages!",
-        "id": "2905"
+        "text": "read 30 pages of new book!",
+        "id": "ae8a"
+    },
+    {
+        "title": "clean",
+        "text": "- tidy\n- dust\n- vacuum",
+        "id": "0356"
     }
 ]
