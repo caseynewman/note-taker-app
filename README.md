@@ -12,7 +12,7 @@ The user will click into the application with the Get Started button. They can t
 
 ## Credits
 
-I worked with my tutor, John Titus, on how to reorganize the files in a way that makes more sense longterm.
+I worked with my tutor, John Titus, on how to reorganize the back end files in a way that makes more sense longterm.
 
 ## License
 
