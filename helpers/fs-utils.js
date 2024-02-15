@@ -38,8 +38,8 @@ const deleteNoteFromFile = (id, file) => {
             console.error(err);
         } else {
             const parsedData = JSON.parse(data);
-            parsedData.filter(note => note.id !== id);
-            writeToFile(file, parsedData);
+            const filteredData = parsedData.filter(note => note.id !== id);
+            writeToFile(file, filteredData);
         }
     });
 }
