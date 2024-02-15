@@ -5,6 +5,7 @@
 The Note Taker App was created so that the user can quickly jot down notes or reminders and access them whenever needed. In building this project, I worked with Express and gained a better understanding of backend code and how to organize it within separate files. I also learned how to create a delete request and implemented the filter method.
 
 ![Note Taker App](./assets/images/note-taker.png)
+[Deployed Website](https://young-wildwood-60197-c36532e321be.herokuapp.com/)
 
 ## Usage
 
