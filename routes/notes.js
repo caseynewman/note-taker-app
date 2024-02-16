@@ -32,6 +32,10 @@ router.delete('/:id', (req, res) => {
     console.log('Request to delete file received');
     const id = req.params.id;
     deleteNoteFromFile(id, './db/db.json');
+    const response = {
+      status: 'success'
+  }
+  res.status(201).json(response)
 });
 
 module.exports = router
